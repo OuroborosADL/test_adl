@@ -85,7 +85,7 @@ prepare:
 	@echo    make macos-prepare
 	@echo    make ios-prepare
 
-common-prepare:  get gen translate
+common-prepare: get
 windows-prepare: common-prepare windows-libs
 	
 ios-prepare: common-prepare ios-libs 
