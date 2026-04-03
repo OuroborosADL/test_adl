@@ -45,8 +45,8 @@ IOS_OUT=ios$(SEP)Frameworks
 DESKTOP_OUT=adl-core$(SEP)bin
 GEO_ASSETS_DIR=assets$(SEP)core
 
-CORE_PRODUCT_NAME=adl-core
-CORE_NAME=adl-lib
+CORE_PRODUCT_NAME=hiddify-core
+CORE_NAME=hiddify-lib
 LIB_NAME=adl-core
 
 ifeq ($(CHANNEL),prod)
