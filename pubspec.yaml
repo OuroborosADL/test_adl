@@ -93,7 +93,7 @@ dependencies:
   in_app_review: ^2.0.10
   # circle_flags: ^4.0.2
   circle_flags:
-    git: https://github.com/adl-com/flutter_circle_flags.git
+    git: https://github.com/OuroborosADL/flutter_circle_flags.git
   fixnum: ^1.1.0
   grpc: ^4.0.1
   bottom_navy_bar: ^6.1.0
