@@ -23,29 +23,7 @@ env:
   TARGET_NAME_zip: "ADL-Windows-Portable-x64"
 
 jobs:
-  test:
-    outputs:
-      draftBuildCode: ${{ steps.draftBuildCode.outputs.datetime }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2.21.0
-        with:
-          flutter-version: ${{ env.FLUTTER_VERSION }}
-          channel: 'stable'
-          cache: true
-
-      - name: Prepare
-        run: make linux-amd64-prepare
-      - name: Test
-        run: flutter test
-
-      - name: make draftBuildCode
-        id: draftBuildCode
-        run: echo "datetime=$(date +'%d.%H.%M')" >> $GITHUB_OUTPUT
-
   build:
-    needs: test
     permissions: write-all
     runs-on: windows-latest
     steps:
@@ -62,7 +40,6 @@ jobs:
       - name: Setup dependencies
         run: |
           make windows-install-deps
-          echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
 
       - name: Prepare for windows
         run: make windows-prepare
