@@ -309,16 +309,16 @@ const ParseResponse$json = const {
 
 /// Descriptor for `ParseResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List parseResponseDescriptor = $convert.base64Decode('Cg1QYXJzZVJlc3BvbnNlEjoKDXJlc3BvbnNlX2NvZGUYASABKA4yFS5oY29tbW9uLlJlc3BvbnNlQ29kZVIMcmVzcG9uc2VDb2RlEhgKB2NvbnRlbnQYAiABKAlSB2NvbnRlbnQSGAoHbWVzc2FnZRgDIAEoCVIHbWVzc2FnZQ==');
-@$core.Deprecated('Use changeHiddifySettingsRequestDescriptor instead')
-const ChangeHiddifySettingsRequest$json = const {
-  '1': 'ChangeHiddifySettingsRequest',
+@$core.Deprecated('Use changeADLSettingsRequestDescriptor instead')
+const ChangeADLSettingsRequest$json = const {
+  '1': 'ChangeADLSettingsRequest',
   '2': const [
-    const {'1': 'hiddify_settings_json', '3': 1, '4': 1, '5': 9, '10': 'hiddifySettingsJson'},
+    const {'1': 'adl_settings_json', '3': 1, '4': 1, '5': 9, '10': 'adlSettingsJson'},
   ],
 };
 
-/// Descriptor for `ChangeHiddifySettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List changeHiddifySettingsRequestDescriptor = $convert.base64Decode('ChxDaGFuZ2VIaWRkaWZ5U2V0dGluZ3NSZXF1ZXN0EjIKFWhpZGRpZnlfc2V0dGluZ3NfanNvbhgBIAEoCVITaGlkZGlmeVNldHRpbmdzSnNvbg==');
+/// Descriptor for `ChangeADLSettingsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List changeADLSettingsRequestDescriptor = $convert.base64Decode('ChxDaGFuZ2VIaWRkaWZ5U2V0dGluZ3NSZXF1ZXN0EjIKFWhpZGRpZnlfc2V0dGluZ3NfanNvbhgBIAEoCVITaGlkZGlmeVNldHRpbmdzSnNvbg==');
 @$core.Deprecated('Use generateConfigRequestDescriptor instead')
 const GenerateConfigRequest$json = const {
   '1': 'GenerateConfigRequest',

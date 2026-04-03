@@ -1,11 +1,11 @@
-package com.hiddify.hiddify.bg
+package com.adl.adl.bg
 
-import com.hiddify.hiddify.IService
-import com.hiddify.hiddify.IServiceCallback
-import com.hiddify.hiddify.Settings
-import com.hiddify.hiddify.constant.Action
-import com.hiddify.hiddify.constant.Alert
-import com.hiddify.hiddify.constant.Status
+import com.adl.adl.IService
+import com.adl.adl.IServiceCallback
+import com.adl.adl.Settings
+import com.adl.adl.constant.Action
+import com.adl.adl.constant.Alert
+import com.adl.adl.constant.Status
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent

@@ -1,4 +1,4 @@
-package com.hiddify.hiddify;
+package com.adl.adl;
 
 interface IServiceCallback {
   void onServiceStatusChanged(int status);

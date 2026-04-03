@@ -1,5 +1,5 @@
-name: hiddify
-description: Cross Platform Multi Protocol Proxy Frontend.
+name: ADL
+description: SECRET.
 publish_to: "none"
 version: 4.1.2+40102
 
@@ -93,7 +93,7 @@ dependencies:
   in_app_review: ^2.0.10
   # circle_flags: ^4.0.2
   circle_flags:
-    git: https://github.com/hiddify-com/flutter_circle_flags.git
+    git: https://github.com/adl-com/flutter_circle_flags.git
   fixnum: ^1.1.0
   grpc: ^4.0.1
   bottom_navy_bar: ^6.1.0
@@ -195,12 +195,12 @@ flutter_native_splash:
     image: assets/images/source/ic_launcher_foreground.png
 
 ffigen:
-  name: "HiddifyCoreNativeLibrary"
-  description: "Bindings to Hiddify Core Library"
-  output: "lib/gen/hiddify_core_generated_bindings.dart"
+  name: "ADLCoreNativeLibrary"
+  description: "Bindings to ADL Core Library"
+  output: "lib/gen/adl_core_generated_bindings.dart"
   headers:
     entry-points:
-      - "hiddify-core/bin/desktop.h"
+      - "adl-core/bin/desktop.h"
 
 sentry:
   upload_debug_symbols: true

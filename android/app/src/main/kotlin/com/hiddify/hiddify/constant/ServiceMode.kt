@@ -1,4 +1,4 @@
-package com.hiddify.hiddify.constant
+package com.adl.adl.constant
 
 object ServiceMode {
     const val NORMAL = "proxy"

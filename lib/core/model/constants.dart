@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 abstract class Constants {
-  static const appName = "Hiddify";
-  static const githubUrl = "https://github.com/hiddify/hiddify-next";
-  static const licenseUrl = "https://github.com/hiddify/hiddify-next?tab=License-1-ov-file#readme";
-  static const githubReleasesApiUrl = "https://api.github.com/repos/hiddify/hiddify-next/releases";
-  static const githubLatestReleaseUrl = "https://github.com/hiddify/hiddify-app/releases/latest";
-  static const appCastUrl = "https://raw.githubusercontent.com/hiddify/hiddify-next/main/appcast.xml";
-  static const telegramChannelUrl = "https://t.me/hiddify";
-  static const privacyPolicyUrl = "https://hiddify.com/privacy-policy/";
-  static const termsAndConditionsUrl = "https://hiddify.com/terms/";
+  static const appName = "ADL";
+  static const githubUrl = "https://github.com/adl/adl-next";
+  static const licenseUrl = "https://github.com/adl/adl-next?tab=License-1-ov-file#readme";
+  static const githubReleasesApiUrl = "https://api.github.com/repos/adl/adl-next/releases";
+  static const githubLatestReleaseUrl = "https://github.com/adl/adl-app/releases/latest";
+  static const appCastUrl = "https://raw.githubusercontent.com/adl/adl-next/main/appcast.xml";
+  static const telegramChannelUrl = "https://t.me/adl";
+  static const privacyPolicyUrl = "https://adl.com/privacy-policy/";
+  static const termsAndConditionsUrl = "https://adl.com/terms/";
   static const cfWarpPrivacyPolicy = "https://www.cloudflare.com/application/privacypolicy/";
   static const cfWarpTermsOfService = "https://www.cloudflare.com/application/terms/";
 }

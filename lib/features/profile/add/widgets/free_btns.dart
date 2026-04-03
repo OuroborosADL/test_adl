@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hiddify/core/localization/locale_preferences.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/model/constants.dart';
-import 'package:hiddify/core/router/dialog/dialog_notifier.dart';
-import 'package:hiddify/features/profile/add/widgets/free_btn.dart';
-import 'package:hiddify/features/profile/model/profile_entity.dart';
-import 'package:hiddify/features/profile/notifier/profile_notifier.dart';
-import 'package:hiddify/features/settings/data/config_option_repository.dart';
+import 'package:adl/core/localization/locale_preferences.dart';
+import 'package:adl/core/localization/translations.dart';
+import 'package:adl/core/model/constants.dart';
+import 'package:adl/core/router/dialog/dialog_notifier.dart';
+import 'package:adl/features/profile/add/widgets/free_btn.dart';
+import 'package:adl/features/profile/model/profile_entity.dart';
+import 'package:adl/features/profile/notifier/profile_notifier.dart';
+import 'package:adl/features/settings/data/config_option_repository.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class FreeBtns extends ConsumerWidget {

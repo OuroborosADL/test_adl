@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/model/failures.dart';
-import 'package:hiddify/features/settings/model/config_option_failure.dart';
+import 'package:adl/core/localization/translations.dart';
+import 'package:adl/core/model/failures.dart';
+import 'package:adl/features/settings/model/config_option_failure.dart';
 
 part 'connection_failure.freezed.dart';
 

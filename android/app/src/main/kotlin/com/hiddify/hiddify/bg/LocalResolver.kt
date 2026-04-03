@@ -1,13 +1,13 @@
-package com.hiddify.hiddify.bg
+package com.adl.adl.bg
 
 import android.net.DnsResolver
 import android.os.Build
 import android.os.CancellationSignal
 import android.system.ErrnoException
 import androidx.annotation.RequiresApi
-import com.hiddify.hiddify.ktx.tryResumeWithException
-import com.hiddify.core.libbox.ExchangeContext
-import com.hiddify.core.libbox.LocalDNSTransport
+import com.adl.adl.ktx.tryResumeWithException
+import com.adl.core.libbox.ExchangeContext
+import com.adl.core.libbox.LocalDNSTransport
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
 import kotlinx.coroutines.runBlocking

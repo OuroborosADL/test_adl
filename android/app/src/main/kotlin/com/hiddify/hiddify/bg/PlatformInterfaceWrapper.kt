@@ -1,4 +1,4 @@
-package com.hiddify.hiddify.bg
+package com.adl.adl.bg
 
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
@@ -7,26 +7,26 @@ import android.os.Build
 import android.os.Process
 import android.util.Log
 import androidx.annotation.RequiresApi
-import com.hiddify.hiddify.Application
-import com.hiddify.core.libbox.InterfaceUpdateListener
-import com.hiddify.core.libbox.Libbox
-import com.hiddify.core.libbox.NetworkInterfaceIterator
-import com.hiddify.core.libbox.PlatformInterface
-import com.hiddify.core.libbox.StringIterator
-import com.hiddify.core.libbox.TunOptions
-import com.hiddify.core.libbox.WIFIState
+import com.adl.adl.Application
+import com.adl.core.libbox.InterfaceUpdateListener
+import com.adl.core.libbox.Libbox
+import com.adl.core.libbox.NetworkInterfaceIterator
+import com.adl.core.libbox.PlatformInterface
+import com.adl.core.libbox.StringIterator
+import com.adl.core.libbox.TunOptions
+import com.adl.core.libbox.WIFIState
 import java.net.Inet6Address
 import java.net.InetSocketAddress
 import java.net.InterfaceAddress
 import java.net.NetworkInterface
 import java.util.Enumeration
-import com.hiddify.core.libbox.NetworkInterface as LibboxNetworkInterface
+import com.adl.core.libbox.NetworkInterface as LibboxNetworkInterface
 
 
 
 import android.system.OsConstants
-import com.hiddify.core.libbox.ConnectionOwner
-import com.hiddify.core.libbox.LocalDNSTransport
+import com.adl.core.libbox.ConnectionOwner
+import com.adl.core.libbox.LocalDNSTransport
 import java.security.KeyStore
 import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi

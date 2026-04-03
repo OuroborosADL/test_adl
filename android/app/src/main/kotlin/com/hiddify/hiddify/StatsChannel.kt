@@ -1,17 +1,17 @@
-package com.hiddify.hiddify
+package com.adl.adl
 
 import android.util.Log
-//import com.hiddify.hiddify.utils.CommandClient
+//import com.adl.adl.utils.CommandClient
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.JSONMethodCodec
-import com.hiddify.core.libbox.StatusMessage
+import com.adl.core.libbox.StatusMessage
 import kotlinx.coroutines.CoroutineScope
 
 //class StatsChannel(private val scope: CoroutineScope) : FlutterPlugin, CommandClient.Handler{
 //    companion object {
 //        const val TAG = "A/StatsChannel"
-//        const val STATS_CHANNEL = "com.hiddify.app/stats"
+//        const val STATS_CHANNEL = "com.adl.app/stats"
 //    }
 //
 //    private val commandClient =

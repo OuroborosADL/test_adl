@@ -4,36 +4,36 @@ import 'dart:math';
 
 import 'package:fpdart/fpdart.dart';
 import 'package:grpc/grpc.dart';
-import 'package:hiddify/core/directories/directories_provider.dart';
-import 'package:hiddify/core/model/directories.dart';
-import 'package:hiddify/core/notification/in_app_notification_controller.dart';
-import 'package:hiddify/core/preferences/general_preferences.dart';
-import 'package:hiddify/features/connection/model/connection_failure.dart';
-import 'package:hiddify/features/settings/data/config_option_repository.dart';
-import 'package:hiddify/hiddifycore/core_interface/core_interface.dart';
-import 'package:hiddify/hiddifycore/generated/v2/hcommon/common.pb.dart';
-import 'package:hiddify/hiddifycore/generated/v2/hcore/hcore.pb.dart';
-import 'package:hiddify/hiddifycore/generated/v2/hcore/hcore_service.pbgrpc.dart';
-import 'package:hiddify/hiddifycore/init_signal.dart';
-import 'package:hiddify/singbox/model/singbox_config_option.dart';
-import 'package:hiddify/features/log/model/log_level.dart' as config_log_level;
-import 'package:hiddify/singbox/model/core_status.dart';
-import 'package:hiddify/singbox/model/warp_account.dart';
+import 'package:adl/core/directories/directories_provider.dart';
+import 'package:adl/core/model/directories.dart';
+import 'package:adl/core/notification/in_app_notification_controller.dart';
+import 'package:adl/core/preferences/general_preferences.dart';
+import 'package:adl/features/connection/model/connection_failure.dart';
+import 'package:adl/features/settings/data/config_option_repository.dart';
+import 'package:adl/adlcore/core_interface/core_interface.dart';
+import 'package:adl/adlcore/generated/v2/hcommon/common.pb.dart';
+import 'package:adl/adlcore/generated/v2/hcore/hcore.pb.dart';
+import 'package:adl/adlcore/generated/v2/hcore/hcore_service.pbgrpc.dart';
+import 'package:adl/adlcore/init_signal.dart';
+import 'package:adl/singbox/model/singbox_config_option.dart';
+import 'package:adl/features/log/model/log_level.dart' as config_log_level;
+import 'package:adl/singbox/model/core_status.dart';
+import 'package:adl/singbox/model/warp_account.dart';
 
-import 'package:hiddify/hiddifycore/core_interface/core_interface_wrapper_stub.dart'
-    if (dart.library.io) 'package:hiddify/hiddifycore/core_interface/core_interface_wrapper.dart';
-import 'package:hiddify/utils/custom_loggers.dart';
-import 'package:hiddify/utils/platform_utils.dart';
+import 'package:adl/adlcore/core_interface/core_interface_wrapper_stub.dart'
+    if (dart.library.io) 'package:adl/adlcore/core_interface/core_interface_wrapper.dart';
+import 'package:adl/utils/custom_loggers.dart';
+import 'package:adl/utils/platform_utils.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:loggy/loggy.dart' as loggyl;
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:rxdart/rxdart.dart';
 
-class HiddifyCoreService with InfraLogger {
-  HiddifyCoreService(this.ref);
+class ADLCoreService with InfraLogger {
+  ADLCoreService(this.ref);
   final Ref ref;
 
-  // CoreHiddifyCoreService() {}
+  // CoreADLCoreService() {}
   final core = getCoreInterface();
 
   CoreStatus currentState = const CoreStatus.stopped();
@@ -52,7 +52,7 @@ class HiddifyCoreService with InfraLogger {
           ref.read(inAppNotificationControllerProvider).showErrorToast(e);
         })
         .map((_) {
-          loggy.info("Hiddify-core setup done");
+          loggy.info("ADL-core setup done");
           ref.read(coreRestartSignalProvider.notifier).restart();
         })
         .run();
@@ -117,12 +117,12 @@ class HiddifyCoreService with InfraLogger {
       loggy.debug("changing options");
       // latestOptions = options;
       try {
-        final res = await core.fgClient.changeHiddifySettings(
-          ChangeHiddifySettingsRequest(hiddifySettingsJson: jsonEncode(options.toJson())),
+        final res = await core.fgClient.changeADLSettings(
+          ChangeADLSettingsRequest(adlSettingsJson: jsonEncode(options.toJson())),
         );
         if (res.messageType != MessageType.EMPTY) return left("${res.messageType} ${res.message}");
-        await core.bgClient.changeHiddifySettings(
-          ChangeHiddifySettingsRequest(hiddifySettingsJson: jsonEncode(options.toJson())),
+        await core.bgClient.changeADLSettings(
+          ChangeADLSettingsRequest(adlSettingsJson: jsonEncode(options.toJson())),
         );
       } on GrpcError catch (e) {
         if (e.code == StatusCode.unavailable) {
@@ -150,9 +150,9 @@ class HiddifyCoreService with InfraLogger {
         await startListeningStatus("bg", core.bgClient);
       }
       // if (latestOptions != null) {
-      //   await core.bgClient.changeHiddifySettings(
-      //     ChangeHiddifySettingsRequest(
-      //       hiddifySettingsJson: jsonEncode(latestOptions!.toJson()),
+      //   await core.bgClient.changeADLSettings(
+      //     ChangeADLSettingsRequest(
+      //       adlSettingsJson: jsonEncode(latestOptions!.toJson()),
       //     ),
       //   );
       // }

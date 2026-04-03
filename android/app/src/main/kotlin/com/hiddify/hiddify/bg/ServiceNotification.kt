@@ -1,4 +1,4 @@
-package com.hiddify.hiddify.bg
+package com.adl.adl.bg
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -14,22 +14,22 @@ import androidx.annotation.StringRes
 import androidx.core.app.NotificationCompat
 import androidx.core.app.ServiceCompat
 import androidx.lifecycle.MutableLiveData
-import com.hiddify.core.api.v2.config.Protocol
-import com.hiddify.core.api.v2.hcommon.Empty
-import com.hiddify.core.api.v2.hcore.CoreClient
-import com.hiddify.core.api.v2.hcore.SystemInfo
-import com.hiddify.core.api.v2.hello.HelloClient
-import com.hiddify.core.api.v2.hello.HelloRequest
-import com.hiddify.hiddify.Application
-import com.hiddify.hiddify.MainActivity
-import com.hiddify.hiddify.R
-import com.hiddify.hiddify.Settings
-import com.hiddify.hiddify.constant.Action
-import com.hiddify.hiddify.constant.Status
-//import com.hiddify.hiddify.utils.CommandClient
-import com.hiddify.core.libbox.Libbox
-import com.hiddify.hiddify.Application.Companion.notification
-import com.hiddify.hiddify.utils.GrpcClientProvider
+import com.adl.core.api.v2.config.Protocol
+import com.adl.core.api.v2.hcommon.Empty
+import com.adl.core.api.v2.hcore.CoreClient
+import com.adl.core.api.v2.hcore.SystemInfo
+import com.adl.core.api.v2.hello.HelloClient
+import com.adl.core.api.v2.hello.HelloRequest
+import com.adl.adl.Application
+import com.adl.adl.MainActivity
+import com.adl.adl.R
+import com.adl.adl.Settings
+import com.adl.adl.constant.Action
+import com.adl.adl.constant.Status
+//import com.adl.adl.utils.CommandClient
+import com.adl.core.libbox.Libbox
+import com.adl.adl.Application.Companion.notification
+import com.adl.adl.utils.GrpcClientProvider
 import com.squareup.wire.GrpcClient
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -74,7 +74,7 @@ class ServiceNotification(private val status: MutableLiveData<Status>, private v
         NotificationCompat.Builder(service, notificationChannel)
                 .setShowWhen(false)
                 .setOngoing(true)
-                .setContentTitle("Hiddify")
+                .setContentTitle("ADL")
                 .setOnlyAlertOnce(true)
                 .setSmallIcon(R.drawable.ic_stat_logo)
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)
@@ -109,13 +109,13 @@ class ServiceNotification(private val status: MutableLiveData<Status>, private v
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             Application.notification.createNotificationChannel(
                 NotificationChannel(
-                    notificationChannel, "hiddify service", NotificationManager.IMPORTANCE_LOW
+                    notificationChannel, "adl service", NotificationManager.IMPORTANCE_LOW
                 )
             )
         }
         service.startForeground(
             notificationId, notificationBuilder
-                .setContentTitle(profileName.takeIf { it.isNotBlank() } ?: "Hiddify")
+                .setContentTitle(profileName.takeIf { it.isNotBlank() } ?: "ADL")
                 .setContentText(service.getString(contentTextId)).build()
         )
     }

@@ -1,6 +1,6 @@
-package com.hiddify.hiddify.constant
+package com.adl.adl.constant
 
 object Action {
-    const val SERVICE = "com.hiddify.app.SERVICE"
-    const val SERVICE_CLOSE = "com.hiddify.app.SERVICE_CLOSE"
+    const val SERVICE = "com.adl.app.SERVICE"
+    const val SERVICE_CLOSE = "com.adl.app.SERVICE_CLOSE"
 }

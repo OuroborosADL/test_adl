@@ -1670,51 +1670,51 @@ class ParseResponse extends $pb.GeneratedMessage {
   void clearMessage() => clearField(3);
 }
 
-class ChangeHiddifySettingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ChangeHiddifySettingsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'hcore'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hiddifySettingsJson')
+class ChangeADLSettingsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ChangeADLSettingsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'hcore'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'adlSettingsJson')
     ..hasRequiredFields = false
   ;
 
-  ChangeHiddifySettingsRequest._() : super();
-  factory ChangeHiddifySettingsRequest({
-    $core.String? hiddifySettingsJson,
+  ChangeADLSettingsRequest._() : super();
+  factory ChangeADLSettingsRequest({
+    $core.String? adlSettingsJson,
   }) {
     final _result = create();
-    if (hiddifySettingsJson != null) {
-      _result.hiddifySettingsJson = hiddifySettingsJson;
+    if (adlSettingsJson != null) {
+      _result.adlSettingsJson = adlSettingsJson;
     }
     return _result;
   }
-  factory ChangeHiddifySettingsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ChangeHiddifySettingsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ChangeADLSettingsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ChangeADLSettingsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ChangeHiddifySettingsRequest clone() => ChangeHiddifySettingsRequest()..mergeFromMessage(this);
+  ChangeADLSettingsRequest clone() => ChangeADLSettingsRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ChangeHiddifySettingsRequest copyWith(void Function(ChangeHiddifySettingsRequest) updates) => super.copyWith((message) => updates(message as ChangeHiddifySettingsRequest)) as ChangeHiddifySettingsRequest; // ignore: deprecated_member_use
+  ChangeADLSettingsRequest copyWith(void Function(ChangeADLSettingsRequest) updates) => super.copyWith((message) => updates(message as ChangeADLSettingsRequest)) as ChangeADLSettingsRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static ChangeHiddifySettingsRequest create() => ChangeHiddifySettingsRequest._();
-  ChangeHiddifySettingsRequest createEmptyInstance() => create();
-  static $pb.PbList<ChangeHiddifySettingsRequest> createRepeated() => $pb.PbList<ChangeHiddifySettingsRequest>();
+  static ChangeADLSettingsRequest create() => ChangeADLSettingsRequest._();
+  ChangeADLSettingsRequest createEmptyInstance() => create();
+  static $pb.PbList<ChangeADLSettingsRequest> createRepeated() => $pb.PbList<ChangeADLSettingsRequest>();
   @$core.pragma('dart2js:noInline')
-  static ChangeHiddifySettingsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChangeHiddifySettingsRequest>(create);
-  static ChangeHiddifySettingsRequest? _defaultInstance;
+  static ChangeADLSettingsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChangeADLSettingsRequest>(create);
+  static ChangeADLSettingsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get hiddifySettingsJson => $_getSZ(0);
+  $core.String get adlSettingsJson => $_getSZ(0);
   @$pb.TagNumber(1)
-  set hiddifySettingsJson($core.String v) { $_setString(0, v); }
+  set adlSettingsJson($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasHiddifySettingsJson() => $_has(0);
+  $core.bool hasADLSettingsJson() => $_has(0);
   @$pb.TagNumber(1)
-  void clearHiddifySettingsJson() => clearField(1);
+  void clearADLSettingsJson() => clearField(1);
 }
 
 class GenerateConfigRequest extends $pb.GeneratedMessage {

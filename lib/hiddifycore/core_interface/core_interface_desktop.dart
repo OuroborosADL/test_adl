@@ -4,47 +4,47 @@ import 'dart:math';
 
 import 'package:ffi/ffi.dart';
 import 'package:grpc/grpc.dart';
-import 'package:hiddify/core/model/directories.dart';
-import 'package:hiddify/gen/hiddify_core_generated_bindings.dart';
-import 'package:hiddify/hiddifycore/core_interface/core_interface.dart';
-import 'package:hiddify/hiddifycore/core_interface/mtls_channel_cred.dart';
-import 'package:hiddify/hiddifycore/generated/v2/hcore/hcore.pb.dart';
-import 'package:hiddify/hiddifycore/generated/v2/hcore/hcore_service.pbgrpc.dart';
-import 'package:hiddify/hiddifycore/generated/v2/hello/hello.pb.dart';
-import 'package:hiddify/hiddifycore/generated/v2/hello/hello_service.pbgrpc.dart';
-import 'package:hiddify/utils/custom_loggers.dart';
+import 'package:adl/core/model/directories.dart';
+import 'package:adl/gen/adl_core_generated_bindings.dart';
+import 'package:adl/adlcore/core_interface/core_interface.dart';
+import 'package:adl/adlcore/core_interface/mtls_channel_cred.dart';
+import 'package:adl/adlcore/generated/v2/hcore/hcore.pb.dart';
+import 'package:adl/adlcore/generated/v2/hcore/hcore_service.pbgrpc.dart';
+import 'package:adl/adlcore/generated/v2/hello/hello.pb.dart';
+import 'package:adl/adlcore/generated/v2/hello/hello_service.pbgrpc.dart';
+import 'package:adl/utils/custom_loggers.dart';
 
 import 'package:loggy/loggy.dart';
 
 import 'package:path/path.dart' as p;
 
-final _logger = Loggy('HiddifyCoreFFI');
+final _logger = Loggy('ADLCoreFFI');
 typedef StopFunc = Pointer<Utf8> Function();
 typedef StopFuncDart = Pointer<Utf8> Function();
 
 class CoreInterfaceDesktop extends CoreInterface with InfraLogger {
-  static final HiddifyCoreNativeLibrary _box = _gen();
+  static final ADLCoreNativeLibrary _box = _gen();
 
-  static HiddifyCoreNativeLibrary _gen() {
+  static ADLCoreNativeLibrary _gen() {
     String fullPath = "";
     if (Platform.environment.containsKey('FLUTTER_TEST')) {
-      fullPath = "hiddify-core";
+      fullPath = "adl-core";
     }
     if (Platform.isWindows) {
-      fullPath = p.join(fullPath, "hiddify-core.dll");
+      fullPath = p.join(fullPath, "adl-core.dll");
     } else if (Platform.isMacOS) {
-      fullPath = p.join(fullPath, "hiddify-core.dylib");
+      fullPath = p.join(fullPath, "adl-core.dylib");
     } else {
-      fullPath = p.join(fullPath, "hiddify-core.so");
+      fullPath = p.join(fullPath, "adl-core.so");
     }
 
-    _logger.debug('hiddify-core native libs path: "$fullPath"');
+    _logger.debug('adl-core native libs path: "$fullPath"');
     final lib = DynamicLibrary.open(fullPath);
     // final stopFunc = lib.lookup<NativeFunction<StopFunc>>('stop').asFunction<StopFunc>();
     // final errPtr2 = stopFunc();
     // final err = errPtr2.cast<Utf8>().toDartString();
 
-    return HiddifyCoreNativeLibrary(lib);
+    return ADLCoreNativeLibrary(lib);
   }
 
   Future<bool> isMusl() async {

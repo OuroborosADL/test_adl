@@ -1,4 +1,4 @@
-package com.hiddify.hiddify.bg
+package com.adl.adl.bg
 
 import android.app.KeyguardManager
 import android.content.Context
@@ -9,11 +9,11 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
-import com.hiddify.hiddify.Application
-import com.hiddify.hiddify.MainActivity
-import com.hiddify.hiddify.Settings
-import com.hiddify.hiddify.constant.ServiceMode
-import com.hiddify.hiddify.constant.Status
+import com.adl.adl.Application
+import com.adl.adl.MainActivity
+import com.adl.adl.Settings
+import com.adl.adl.constant.ServiceMode
+import com.adl.adl.constant.Status
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

@@ -1,18 +1,18 @@
-package com.hiddify.hiddify
+package com.adl.adl
 
 import android.util.Log
 import com.google.gson.Gson
-//import com.hiddify.hiddify.utils.CommandClient
-import com.hiddify.hiddify.utils.ParsedOutboundGroup
+//import com.adl.adl.utils.CommandClient
+import com.adl.adl.utils.ParsedOutboundGroup
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.EventChannel
-import com.hiddify.core.libbox.OutboundGroup
+import com.adl.core.libbox.OutboundGroup
 import kotlinx.coroutines.CoroutineScope
 //
 //class GroupsChannel(private val scope: CoroutineScope) : FlutterPlugin, CommandClient.Handler {
 //    companion object {
 //        const val TAG = "A/GroupsChannel"
-//        const val CHANNEL = "com.hiddify.app/groups"
+//        const val CHANNEL = "com.adl.app/groups"
 //        val gson = Gson()
 //    }
 //

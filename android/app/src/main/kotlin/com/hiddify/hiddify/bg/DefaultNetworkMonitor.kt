@@ -1,10 +1,10 @@
-package com.hiddify.hiddify.bg
+package com.adl.adl.bg
 
 import android.net.Network
 import android.os.Build
-import com.hiddify.hiddify.Application
-import com.hiddify.core.libbox.InterfaceUpdateListener
-import com.hiddify.hiddify.constant.Bugs
+import com.adl.adl.Application
+import com.adl.core.libbox.InterfaceUpdateListener
+import com.adl.adl.constant.Bugs
 
 
 import kotlinx.coroutines.Dispatchers

@@ -1,10 +1,10 @@
-package com.hiddify.hiddify.bg
+package com.adl.adl.bg
 import android.content.BroadcastReceiver
 import android.content.Context
 
 import android.content.Intent
-import com.hiddify.hiddify.MainActivity
-import com.hiddify.hiddify.Settings
+import com.adl.adl.MainActivity
+import com.adl.adl.Settings
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

@@ -1,10 +1,10 @@
-package com.hiddify.hiddify.bg
+package com.adl.adl.bg
 
 import android.os.RemoteCallbackList
 import androidx.lifecycle.MutableLiveData
-import com.hiddify.hiddify.IService
-import com.hiddify.hiddify.IServiceCallback
-import com.hiddify.hiddify.constant.Status
+import com.adl.adl.IService
+import com.adl.adl.IServiceCallback
+import com.adl.adl.constant.Status
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

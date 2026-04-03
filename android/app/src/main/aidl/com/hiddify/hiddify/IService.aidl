@@ -1,6 +1,6 @@
-package com.hiddify.hiddify;
+package com.adl.adl;
 
-import com.hiddify.hiddify.IServiceCallback;
+import com.adl.adl.IServiceCallback;
 
 interface IService {
   int getStatus();

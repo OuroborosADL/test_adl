@@ -56,10 +56,10 @@ class CoreClient extends $grpc.Client {
       '/hcore.Core/Parse',
       ($0.ParseRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.ParseResponse.fromBuffer(value));
-  static final _$changeHiddifySettings =
-      $grpc.ClientMethod<$0.ChangeHiddifySettingsRequest, $0.CoreInfoResponse>(
-          '/hcore.Core/ChangeHiddifySettings',
-          ($0.ChangeHiddifySettingsRequest value) => value.writeToBuffer(),
+  static final _$changeADLSettings =
+      $grpc.ClientMethod<$0.ChangeADLSettingsRequest, $0.CoreInfoResponse>(
+          '/hcore.Core/ChangeADLSettings',
+          ($0.ChangeADLSettingsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.CoreInfoResponse.fromBuffer(value));
   static final _$startService =
@@ -170,10 +170,10 @@ class CoreClient extends $grpc.Client {
     return $createUnaryCall(_$parse, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.CoreInfoResponse> changeHiddifySettings(
-      $0.ChangeHiddifySettingsRequest request,
+  $grpc.ResponseFuture<$0.CoreInfoResponse> changeADLSettings(
+      $0.ChangeADLSettingsRequest request,
       {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$changeHiddifySettings, request, options: options);
+    return $createUnaryCall(_$changeADLSettings, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.CoreInfoResponse> startService(
@@ -299,14 +299,14 @@ abstract class CoreServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.ParseRequest.fromBuffer(value),
         ($0.ParseResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ChangeHiddifySettingsRequest,
+    $addMethod($grpc.ServiceMethod<$0.ChangeADLSettingsRequest,
             $0.CoreInfoResponse>(
-        'ChangeHiddifySettings',
-        changeHiddifySettings_Pre,
+        'ChangeADLSettings',
+        changeADLSettings_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.ChangeHiddifySettingsRequest.fromBuffer(value),
+            $0.ChangeADLSettingsRequest.fromBuffer(value),
         ($0.CoreInfoResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.StartRequest, $0.CoreInfoResponse>(
         'StartService',
@@ -432,10 +432,10 @@ abstract class CoreServiceBase extends $grpc.Service {
     return parse(call, await request);
   }
 
-  $async.Future<$0.CoreInfoResponse> changeHiddifySettings_Pre(
+  $async.Future<$0.CoreInfoResponse> changeADLSettings_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$0.ChangeHiddifySettingsRequest> request) async {
-    return changeHiddifySettings(call, await request);
+      $async.Future<$0.ChangeADLSettingsRequest> request) async {
+    return changeADLSettings(call, await request);
   }
 
   $async.Future<$0.CoreInfoResponse> startService_Pre(
@@ -510,8 +510,8 @@ abstract class CoreServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.SetupRequest request);
   $async.Future<$0.ParseResponse> parse(
       $grpc.ServiceCall call, $0.ParseRequest request);
-  $async.Future<$0.CoreInfoResponse> changeHiddifySettings(
-      $grpc.ServiceCall call, $0.ChangeHiddifySettingsRequest request);
+  $async.Future<$0.CoreInfoResponse> changeADLSettings(
+      $grpc.ServiceCall call, $0.ChangeADLSettingsRequest request);
   $async.Future<$0.CoreInfoResponse> startService(
       $grpc.ServiceCall call, $0.StartRequest request);
   $async.Future<$0.CoreInfoResponse> stop(

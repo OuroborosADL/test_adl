@@ -1,4 +1,4 @@
-package com.hiddify.hiddify.constant
+package com.adl.adl.constant
 
 enum class Status {
     Stopped,

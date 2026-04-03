@@ -1,17 +1,17 @@
 /**
- * This file defines various configuration options for the Hiddify application.
+ * This file defines various configuration options for the ADL application.
  */
 
 syntax = "proto3";
 
-package hiddifyoptions;
-option go_package = "github.com/hiddify/hiddify-core/v2/hiddifyoptions";
-option java_package = "com.hiddify.core.api.v2.hiddifyoptions";
+package adloptions;
+option go_package = "github.com/adl/adl-core/v2/adloptions";
+option java_package = "com.adl.core.api.v2.adloptions";
 
 /**
- * HiddifyOptions defines the configuration options for the Hiddify application.
+ * ADLOptions defines the configuration options for the ADL application.
  */
-message HiddifyOptions {
+message ADLOptions {
   bool enable_full_config = 1; // Enables full configuration options.
   string log_level = 2; // Specifies the logging level (e.g., INFO, DEBUG).
   string log_file = 3; // Path to the log file.

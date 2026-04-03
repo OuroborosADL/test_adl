@@ -1,4 +1,4 @@
-package com.hiddify.hiddify.ktx
+package com.adl.adl.ktx
 
 import kotlin.coroutines.Continuation
 

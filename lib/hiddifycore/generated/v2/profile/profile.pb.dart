@@ -10,7 +10,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../hiddifyoptions/hiddify_options.pb.dart' as $8;
+import '../adloptions/adl_options.pb.dart' as $8;
 
 class ProfileEntity extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ProfileEntity', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'profile'), createEmptyInstance: create)
@@ -20,7 +20,7 @@ class ProfileEntity extends $pb.GeneratedMessage {
     ..aInt64(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastUpdate')
     ..aOM<ProfileOptions>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'options', subBuilder: ProfileOptions.create)
     ..aOM<SubscriptionInfo>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'subInfo', subBuilder: SubscriptionInfo.create)
-    ..aOM<$8.HiddifyOptions>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'overrideHiddifyOptions', subBuilder: $8.HiddifyOptions.create)
+    ..aOM<$8.ADLOptions>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'overrideADLOptions', subBuilder: $8.ADLOptions.create)
     ..hasRequiredFields = false
   ;
 
@@ -32,7 +32,7 @@ class ProfileEntity extends $pb.GeneratedMessage {
     $fixnum.Int64? lastUpdate,
     ProfileOptions? options,
     SubscriptionInfo? subInfo,
-    $8.HiddifyOptions? overrideHiddifyOptions,
+    $8.ADLOptions? overrideADLOptions,
   }) {
     final _result = create();
     if (id != null) {
@@ -53,8 +53,8 @@ class ProfileEntity extends $pb.GeneratedMessage {
     if (subInfo != null) {
       _result.subInfo = subInfo;
     }
-    if (overrideHiddifyOptions != null) {
-      _result.overrideHiddifyOptions = overrideHiddifyOptions;
+    if (overrideADLOptions != null) {
+      _result.overrideADLOptions = overrideADLOptions;
     }
     return _result;
   }
@@ -138,15 +138,15 @@ class ProfileEntity extends $pb.GeneratedMessage {
   SubscriptionInfo ensureSubInfo() => $_ensure(5);
 
   @$pb.TagNumber(8)
-  $8.HiddifyOptions get overrideHiddifyOptions => $_getN(6);
+  $8.ADLOptions get overrideADLOptions => $_getN(6);
   @$pb.TagNumber(8)
-  set overrideHiddifyOptions($8.HiddifyOptions v) { setField(8, v); }
+  set overrideADLOptions($8.ADLOptions v) { setField(8, v); }
   @$pb.TagNumber(8)
-  $core.bool hasOverrideHiddifyOptions() => $_has(6);
+  $core.bool hasOverrideADLOptions() => $_has(6);
   @$pb.TagNumber(8)
-  void clearOverrideHiddifyOptions() => clearField(8);
+  void clearOverrideADLOptions() => clearField(8);
   @$pb.TagNumber(8)
-  $8.HiddifyOptions ensureOverrideHiddifyOptions() => $_ensure(6);
+  $8.ADLOptions ensureOverrideADLOptions() => $_ensure(6);
 }
 
 class ProfileOptions extends $pb.GeneratedMessage {

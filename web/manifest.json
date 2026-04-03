@@ -1,11 +1,11 @@
 {
-    "name": "Hiddify",
-    "short_name": "Hiddify",
+    "name": "ADL",
+    "short_name": "ADL",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Hiddify",
+    "description": "ADL",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

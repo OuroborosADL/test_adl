@@ -1,12 +1,12 @@
-package com.hiddify.hiddify
+package com.adl.adl
 
 import android.content.Context
 import android.util.Base64
-import com.hiddify.hiddify.bg.ProxyService
-import com.hiddify.hiddify.bg.VPNService
-import com.hiddify.hiddify.constant.PerAppProxyMode
-import com.hiddify.hiddify.constant.ServiceMode
-import com.hiddify.hiddify.constant.SettingsKey
+import com.adl.adl.bg.ProxyService
+import com.adl.adl.bg.VPNService
+import com.adl.adl.constant.PerAppProxyMode
+import com.adl.adl.constant.ServiceMode
+import com.adl.adl.constant.SettingsKey
 import org.json.JSONObject
 import java.io.ByteArrayInputStream
 import java.io.File

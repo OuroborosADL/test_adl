@@ -1,15 +1,15 @@
-package com.hiddify.hiddify.utils
+package com.adl.adl.utils
 
-import com.hiddify.core.libbox.CommandClient
-import com.hiddify.core.libbox.CommandClientHandler
-import com.hiddify.core.libbox.CommandClientOptions
-import com.hiddify.core.libbox.Connections
-import com.hiddify.core.libbox.Libbox
-import com.hiddify.core.libbox.OutboundGroup
-import com.hiddify.core.libbox.OutboundGroupIterator
-import com.hiddify.core.libbox.StatusMessage
-import com.hiddify.core.libbox.StringIterator
-import com.hiddify.hiddify.ktx.toList
+import com.adl.core.libbox.CommandClient
+import com.adl.core.libbox.CommandClientHandler
+import com.adl.core.libbox.CommandClientOptions
+import com.adl.core.libbox.Connections
+import com.adl.core.libbox.Libbox
+import com.adl.core.libbox.OutboundGroup
+import com.adl.core.libbox.OutboundGroupIterator
+import com.adl.core.libbox.StatusMessage
+import com.adl.core.libbox.StringIterator
+import com.adl.adl.ktx.toList
 import go.Seq
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

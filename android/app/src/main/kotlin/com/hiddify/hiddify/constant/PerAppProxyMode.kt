@@ -1,4 +1,4 @@
-package com.hiddify.hiddify.constant
+package com.adl.adl.constant
 
 object PerAppProxyMode {
     const val OFF = "off"
